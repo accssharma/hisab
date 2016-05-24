@@ -1,0 +1,18 @@
+#README
+Input format:
+
+100,A,[A U S P],04-21
+155,U,[A U S P],04-11
+65,P,[A U S P],04-10
+
+Output:
+[U, P, A, S]
+[amount_paid=100.0, paidBy=A, toBeDividedInto=[A, U, S, P], billDate=04-21, 
+amount_paid=155.0, paidBy=U, toBeDividedInto=[A, U, S, P], billDate=04-11, 
+amount_paid=65.0, paidBy=P, toBeDividedInto=[A, U, S, P], billDate=04-10]
+user-wise total plus: =>  {U=155.0, A=100.0, P=65.0, S=0.0}
+user-wise total minus:  =>  {U=80.0, A=80.0, P=80.0, S=80.0}
+
+Program Argument:
+
+$ java path-to-main-class <path-to-input-file> <space delimited unique users>
