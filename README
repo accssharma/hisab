@@ -16,3 +16,6 @@ user-wise total minus:  =>  {U=80.0, A=80.0, P=80.0, S=80.0}
 Program Argument:
 
 $ java path-to-main-class <path-to-input-file> <space delimited unique users>
+
+Example:
+$ java hisabfile.txt "A U S P"
