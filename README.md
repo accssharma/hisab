@@ -1,4 +1,4 @@
-# README
+# Hisab - Simple tool to settle up shared expenses with friends
 
 **Author:** [Ashish Sharma](http://www.accssharma.com)
 
