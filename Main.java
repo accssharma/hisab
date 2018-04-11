@@ -1,5 +1,3 @@
-package mainpackage;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -22,16 +20,18 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		if (args.length != 2) {
 			System.out.println("Enter a source file");
+			System.out.println("Usage: \n\tjava <path-to-a-source-file> '<space-separated-initials-of-roommates>'");
 			System.exit(1);
 		}
 		File file = new File(args[0]);
 		String[] spaceSeparatedUniqueUsers = args[1].split(" ");
 		uniqueUsers = new HashSet<String>(Arrays.asList(spaceSeparatedUniqueUsers));
-		System.out.println(uniqueUsers);
+		System.out.println("User initials:" + uniqueUsers);
 
 		collectionOfBills = new ArrayList<Bill>();
 		Map<String, Float> userPlus = new HashMap<String, Float>();
 		Map<String, Float> userMinus = new HashMap<String, Float>();
+		Map<String, Float> userSettle = new HashMap<String, Float>();
 
 		FileInputStream fis = new FileInputStream(file);
 		// Construct BufferedReader from InputStreamReader
@@ -47,7 +47,14 @@ public class Main {
 		}
 		br.close();
 
-		System.out.println(collectionOfBills);
+		System.out.println("");
+		System.out.println("All bills:: \n");
+		int i = 1;
+		for (Bill bill : collectionOfBills) {
+			System.out.print("\t"+i + ". " +bill+"\n");
+			i++;
+		}
+		System.out.println("");
 
 		for (String user : uniqueUsers) {
 			float totalPlus = 0;
@@ -64,10 +71,12 @@ public class Main {
 
 			userPlus.put(user, totalPlus);
 			userMinus.put(user, totalMinus);
+			userSettle.put(user, totalPlus - totalMinus);
 		}
 
 		System.out.println("user-wise total plus: =>  " + userPlus);
 		System.out.println("user-wise total minus:  =>  " + userMinus);
+		System.out.println("user-wise settle down:  =>  " + userSettle);
 
 	}
 }

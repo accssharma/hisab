@@ -1,5 +1,3 @@
-package mainpackage;
-
 import java.util.List;
 
 public class Bill {
@@ -34,8 +32,8 @@ public class Bill {
 	
 	@Override
 	public String toString() {
-		return "\namount_paid=" + amount_paid + ", paidBy=" + paidBy + ", toBeDividedInto=" + toBeDividedInto
-				+ ", billDate=" + billDate;
+		return "Total amount paid = " + amount_paid + "\t Payer = " + paidBy + "\t Splitted into = " + toBeDividedInto
+				+ "\t Bill detail = " + billDate;
 	}
 
 }
