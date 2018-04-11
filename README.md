@@ -4,34 +4,35 @@
 
 **Compile:**
 
-$ javac Main.java 
+`$ javac Main.java`
 
 **Run:**
 
-$ java bill.txt "A U S P"
+`$ java bill.txt "A U S P"`
 
 ## Example
 
 ### Input format:
 
-100,A,[A U S P],04-21
+	100,A,[A U S P],04-21
 
-155,U,[A U S P],04-11
+	155,U,[A U S P],04-11
 
-65,P,[A U S P],04-10
+	65,P,[A U S P],04-10
 
 ### Output:
 
 User initials:[P, A, S, U]
 
-All bills:: 
+All bills::
 
-  1. Total amount paid = 100.0	 Payer = A	 Splitted into = [A, U, S, P]	 Bill detail = 04-21
+	1. Total amount paid = 100.0	 Payer = A	 Splitted into = [A, U, S, P]	 Bill detail = 04-21
 
-  2. Total amount paid = 155.0	 Payer = U	 Splitted into = [A, U, S, P]	 Bill detail = 04-11
+	2. Total amount paid = 155.0	 Payer = U	 Splitted into = [A, U, S, P]	 Bill detail = 04-11
 
-  3. Total amount paid = 65.0	 Payer = P	 Splitted into = [A, U, S, P]	 Bill detail = 04-10
+	3. Total amount paid = 65.0	 Payer = P	 Splitted into = [A, U, S, P]	 Bill detail = 04-10
 
+Summary::
 
 	user-wise total plus: =>  {P=65.0, A=100.0, S=0.0, U=155.0}
 
