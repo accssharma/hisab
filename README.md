@@ -1,4 +1,4 @@
-# Hisab - Simple tool to settle up shared expenses with friends
+# Hisab - Settle up shared expenses with roommates
 
 **Author:** [Ashish Sharma](http://www.accssharma.com)
 
